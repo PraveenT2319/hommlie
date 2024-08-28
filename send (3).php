@@ -23,15 +23,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   try {
     // Configure the SMTP settings
     $mail->isSMTP();
-    $mail->Host = '';
+    $mail->Host = 'hommlie.com';
     $mail->SMTPAuth = true;
-    $mail->Username = ''; // Your Gmail email address
-    $mail->Password = ''; // Your Gmail password
+    $mail->Username = 'reach@hommlie.com'; // Your Gmail email address
+    $mail->Password = 'Hommlie@123'; // Your Gmail password
     $mail->SMTPSecure = 'ssl';
     $mail->Port = 465;
 
     // Set the sender and recipient
-    $mail->setFrom('', $name);
+    $mail->setFrom('reach@hommlie.com', $name);
     $mail->addAddress(''); // Recipient email address
 
     // Set email content

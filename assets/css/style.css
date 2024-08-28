@@ -4713,118 +4713,105 @@ button:focus,
 
 .my-float{
 	margin-top:16px;
-}
-/* styles.css */
-
-/* General popup styles */
-.popup {
-    display: none;
+}/* Popup background *//* Popup background */
+.popup-overlay {
+    display: none; /* Hidden by default */
     position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    max-width: 500px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     z-index: 1000;
-}
-
-.popup-content {
-    position: relative;
-    padding: 20px;
-    text-align: center;
-}
-
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-/* General popup styles */
-.popup {
-    display: none;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%; /* Adjusted width */
-    max-width: 800px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-    padding: 20px; /* Added padding for extra spacing */
-}
-
-.popup-content {
-    position: relative;
-    text-align: center;
-}
-
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-/* Split banner styles */
-.split-banner {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap; /* Enable wrapping on smaller screens */
-}
-
-.banner-content, .banner-image {
-    width: 48%; /* Adjusted width to allow some space between the sections */
-    padding: 10px;
-}
-
-.banner-image img {
+    left: 0;
+    top: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Mobile responsiveness */
-@media screen and (max-width: 600px) {
-    .popup {
-        width: 95%; /* Full width for mobile */
-        max-width: none; /* Remove max-width restriction */
-        padding: 15px; /* Reduce padding for smaller screens */
-    }
-
-    .split-banner {
-        flex-direction: column; /* Stack content vertically */
-    }
-
-    .banner-content, .banner-image {
-        width: 100%; /* Full width for each section */
-        padding: 5px; /* Reduce padding for smaller screens */
-    }
-
-    .close-btn {
-        top: 5px; /* Adjusted position */
-        right: 10px;
-        font-size: 18px; /* Slightly smaller close button */
-    }
+/* Popup box */
+.popup-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px; /* Adjust as needed */
+    position: relative;
 }
 
-/* Floating effect */
-.popup {
-    animation: float 5s ease-in-out infinite;
+/* Close button */
+.close-button {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
 }
 
-@keyframes float {
-    0%, 100% {
-        transform: translate(-50%, -50%) translateY(0);
-    }
-    50% {
-        transform: translate(-50%, -50%) translateY(-10px);
+/* Center the content */
+.popup-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensure the content is centered vertically */
+}
+
+/* Form container */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Form box styling */
+.form-box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px; /* Adjust as needed */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-box input,
+.form-box select,
+.form-box textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-box select {
+    appearance: none;
+    background: #fff;
+    cursor: pointer;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .popup-box {
+        width: 90%; /* Adjust width for mobile */
+        max-width: 100%;
     }
 }
